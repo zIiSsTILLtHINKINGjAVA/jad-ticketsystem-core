@@ -21,9 +21,9 @@
 	
 	<bean id="ds" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-		<property name="url" value="jdbc:mysql://localhost:3306/TicketSystemDB"/>
-		<property name="username" value="zi"/>
-		<property name="password" value="zi123"/>
+		<property name="url" value="jdbc:mysql://172.16.31.6:3306/TicketSystemDB"/>
+		<property name="username" value="root"/>
+		<property name="password" value="1234"/>
 	</bean>
 	
 	<bean id="emf" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">

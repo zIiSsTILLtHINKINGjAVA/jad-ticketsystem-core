@@ -16,7 +16,7 @@ import javax.persistence.Table;
  * @author ZI
  */
 @Entity
-//@Table(name = "tbAccount")
+@Table(name = "tbAccount")
 //@NamedQueries({
 //    @NamedQuery(name = "User.findAll", query = "SELECT u FROM User u"),
 //    @NamedQuery(name = "User.findByUserId", query = "SELECT u FROM User u WHERE u.userId = :userId"),
@@ -29,7 +29,7 @@ import javax.persistence.Table;
 //    @NamedQuery(name = "User.findByMustChangePassword", query = "SELECT u FROM User u WHERE u.mustChangePassword = :mustChangePassword"),
 //    @NamedQuery(name = "User.findByIsSystem", query = "SELECT u FROM User u WHERE u.isSystem = :isSystem"),
 //    @NamedQuery(name = "User.findByIsAdministrator", query = "SELECT u FROM User u WHERE u.isAdministrator = :isAdministrator")})
-public class User implements Serializable {
+public class Account implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
@@ -54,6 +54,9 @@ public class User implements Serializable {
     private Boolean mustChangePassword;
     private Boolean isSystem;
     private Boolean isAdministrator;
+    
+    @Temporary(timestamp)
+    private Date memberSince;
 
     public Long getId() {
         return id;
@@ -135,10 +138,10 @@ public class User implements Serializable {
         this.username = username;
     }
 
-    public User() {
+    public Account() {
     }
 
-    public User(String username, String password) {
+    public Account(String username, String password) {
         this.username = username;
         this.password = password;
     }
@@ -153,10 +156,10 @@ public class User implements Serializable {
 
     @Override
     public boolean equals(Object object) {
-        if (!(object instanceof User)) {
+        if (!(object instanceof Account)) {
             return false;
         }
-        User other = (User) object;
+        Account other = (Account) object;
         if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
             return false;
         }

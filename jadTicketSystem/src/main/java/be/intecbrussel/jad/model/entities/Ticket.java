@@ -13,6 +13,7 @@ import javax.persistence.ManyToOne;
  * @author alig
  */
 @Entity
+@Table(name="tbTicket")
 public class Ticket implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
@@ -24,6 +25,7 @@ public class Ticket implements Serializable {
     private Boolean solved;
     private String contact;//it is a end user
     private String employee;
+    
     private Timestamp datum;
     private Timestamp datumSolution;
     private Long waitingTime;
