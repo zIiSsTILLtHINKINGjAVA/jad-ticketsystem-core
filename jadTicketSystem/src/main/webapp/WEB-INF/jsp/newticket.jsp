@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="form" uri="http://wwww.springframework.org/tags/form" %> 
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %> 
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 	<html>
@@ -10,7 +10,6 @@
     <body>
         <!--title, category, omschrijving,  submit button -->
         <form:form>            
-        <form:checkbox>huhu</form:checkbox>
 <!--             <h:panelGrid columns="2"> -->
 <!--                 <h:outputLabel value="Title:" for="title"></h:outputLabel> -->
 <!--                 <h:inputText id="title" value="#{ticketManagementBean.ticket.title}"> </h:inputText> -->
@@ -27,7 +26,6 @@
 <!--             </h:panelGrid> -->
 	
         </form:form>
-        hallo
     </body>
 </html>
 

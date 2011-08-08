@@ -1,29 +1,26 @@
 package be.intecbrussel.jad.controllers;
 
 
-import be.intecbrussel.jad.model.entities.Account;
-import be.intecbrussel.jad.services.AccountService;
-import be.intecbrussel.jad.utils.JsfUtil;
-
-
 import java.io.Serializable;
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
+
 import javax.faces.component.UIComponent;
 import javax.faces.context.FacesContext;
 import javax.faces.convert.Converter;
-import javax.faces.convert.FacesConverter;
 import javax.faces.model.DataModel;
 import javax.faces.model.ListDataModel;
 import javax.faces.model.SelectItem;
+
+import be.intecbrussel.jad.model.entities.Account;
+import be.intecbrussel.jad.services.AccountService;
+import be.intecbrussel.jad.utils.JsfUtil;
 
 /**
  *
  * @author ZI
  */
 
-@ManagedBean (name="userManagedBean")
-@SessionScoped
+//@ManagedBean (name="userManagedBean")
+//@SessionScoped
 public class AccountController implements Serializable {
 
     private Account currentUser;
@@ -169,7 +166,7 @@ public class AccountController implements Serializable {
         return JsfUtil.getSelectItems(service.findAll(), true);
     }
 
-    @FacesConverter(forClass=Account.class)
+//    @FacesConverter(forClass=Account.class)
     public static class UserControllerConverter implements Converter {
 
         public Object getAsObject(FacesContext facesContext, UIComponent component, String value) {
