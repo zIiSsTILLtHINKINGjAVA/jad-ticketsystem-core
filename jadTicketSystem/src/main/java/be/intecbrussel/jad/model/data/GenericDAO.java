@@ -23,7 +23,7 @@ public class GenericDAO<T> implements CRUDable<T> {
     private Class<T> entityClass;
 
     static {
-        emf = Persistence.createEntityManagerFactory("ticketPU");
+        emf = Persistence.createEntityManagerFactory("ticketsystem");
     }
 
 //    public GenericDAO() {

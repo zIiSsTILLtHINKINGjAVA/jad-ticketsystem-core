@@ -1,7 +1,7 @@
 package be.intecbrussel.jad.model.data;
 
-import be.intecbrussel.jad.model.entities.Ticket;
 import java.util.List;
+
 import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
@@ -9,6 +9,8 @@ import javax.persistence.criteria.Root;
 import javax.persistence.metamodel.EntityType;
 import javax.persistence.metamodel.Metamodel;
 import javax.persistence.metamodel.SingularAttribute;
+
+import be.intecbrussel.jad.model.entities.Ticket;
 
 /**
  *
@@ -40,4 +42,5 @@ public class TicketDAO extends GenericDAO<Ticket> {
         TypedQuery<Ticket> tq = getEm().createQuery(cq);
         return tq.getResultList();
     }
+    	
 }
